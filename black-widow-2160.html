@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴 | Downloads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://ik.imagekit.io/qoobmximx/New%20Project%201%20_B35A9ED_.png?updatedAt=1755188985376"
+        type="png/image/x-icon">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --secondary-color: #e50914a6;
+            --background-color: #141414;
+            --surface-color: #23252a;
+            --text-color: #ffffff;
+            --text-color-secondary: #a0a0a0;
+            --border-radius: 8px;
+            --transition-speed: 0.3s;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://ik.imagekit.io/qoobmximx/grok_image_x3i8zk0.jpg?updatedAt=1756398316924');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            opacity: 0.3;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.7));
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header p {
+            color: var(--text-color-secondary);
+            font-size: 1.1rem;
+        }
+
+        .header i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .notice-container {
+            background-color: var(--surface-color);
+            border-left: 4px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .notice-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .notice-title i {
+            margin-right: 0.5rem;
+        }
+
+        .notice-text h1 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-text p {
+            color: var(--text-color-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .download-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .item {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .size {
+            color: var(--text-color-secondary);
+        }
+
+        .quality {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .server-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-color-secondary);
+        }
+
+        .server-status {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #4caf50;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn:hover {
+            background-color: #f40612;
+        }
+
+        .info-text {
+            text-align: center;
+            color: var(--text-color-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .watermark {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(229, 9, 20, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        .loader-text {
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .custom-alert button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 0.75rem 1.5rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color var(--transition-speed);
+        }
+
+        .custom-alert button:hover {
+            background-color: #f40612;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .download-btn {
+                align-self: stretch;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Image Background -->
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Preparing download links...</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-download"></i> 𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴 Downloads</h1>
+            <p>High quality videos with multiple server options</p>
+        </div>
+
+        <!-- Notice Container (replaces countdown) -->
+        <div class="notice-container">
+            <div class="notice-title"><i class="fas fa-exclamation-circle"></i> IMPORTANT NOTICE</div>
+            <div class="notice-text">
+                <h1>Please do not close this page</h1>
+                <p>If you close this page or switch tabs during download, the process may fail. Please keep this page
+                    open until your download completes.</p>
+            </div>
+        </div>
+
+        <!-- Download Items -->
+        <div class="download-list">
+            <div class="item large-file">
+                <div class="item-content">
+                    <div class="title">Black.Widow.2021.IMAX.BluRay.x265.HEVC.2CH.HINDI.mkv</div>
+                    <div class="meta">
+                        <span class="size">15 GB</span>
+                        <span class="quality">QHD 2160p</span>
+                    </div>
+                    <div class="server-indicator">
+                        <span class="server-status"></span>
+                        Server : DIRECT
+                    </div>
+                </div>
+                <a href="https://pixeldrain.dev/api/file/f11fsi98?download" class="download-btn"
+                    onclick="initiateDownload(event, 1)">
+                    <i class="fas fa-cloud-download-alt"></i> Download
+                </a>
+            </div>
+
+            <div class="item large-file">
+                <div class="item-content">
+                    <div class="title">Black.Widow.2021.IMAX.BluRay.x265.HEVC.2CH.HINDI.mkv</div>
+                    <div class="meta">
+                        <span class="size">15 GB</span>
+                        <span class="quality">QHD 2160p</span>
+                    </div>
+                    <div class="server-indicator">
+                        <span class="server-status"></span>
+                        Server : DIRECT
+                    </div>
+                </div>
+                <a href="https://pixel.hubcdn.fans/?id=ed9514fee0d3168dd18683f142637345a609d52c0a1cca9921b0684b5c4ad77c63b52f5ea4272948ffda2176f71309638f28065ae71567568c86aa989fc98cc4977d7c68e8001de32535a65743c4728cef13735ce37f1d7492d521c2cb780692::9cf01c811f62e9d85a1f66e69480ebb6"
+                    class="download-btn" onclick="initiateDownload(event, 2)">
+                    <i class="fas fa-cloud-download-alt"></i> Download
+                </a>
+            </div>
+
+            <div class="item large-file">
+                <div class="item-content">
+                    <div class="title">Black.Widow.2021.IMAX.BluRay.x265.HEVC.2CH.HINDI.mkv</div>
+                    <div class="meta">
+                        <span class="size">15 GB</span>
+                        <span class="quality">QHD 2160p</span>
+                    </div>
+                    <div class="server-indicator">
+                        <span class="server-status"></span>
+                        Server : V-CLOUD
+                    </div>
+                </div>
+                <a href="https://vcloud.lol/xofvnxfsfm0dndr" class="download-btn">
+                    <i class="fas fa-cloud-download-alt"></i> ///VISIT///
+                </a>
+            </div>
+        </div>
+
+        <div class="info-text">
+            <i class="fas fa-info-circle"></i> Files are hosted on multiple servers for your convenience
+        </div>
+    </div>
+
+    <div class="watermark">Secure Download Portal v2.0</div>
+
+    <!-- HTML for Custom Alert -->
+    <div id="customAlert" class="custom-alert">
+        <div id="customAlertMessage">This is an alert</div>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <script>
+        // Simulate loader
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            loader.style.opacity = "0";
+            setTimeout(() => loader.style.display = "none", 300);
+        });
+
+        // Handle download
+        function initiateDownload(event, fileId) {
+            event.preventDefault();
+
+            const link = event.currentTarget.href;
+            showAlert("Your download will start shortly...");
+
+            // small delay before download
+            setTimeout(() => {
+                window.location.href = link;
+            }, 1500);
+        }
+
+        // Custom alert functions
+        function showAlert(message) {
+            const alertBox = document.getElementById("customAlert");
+            document.getElementById("customAlertMessage").innerText = message;
+            alertBox.style.display = "block";
+        }
+
+        function closeAlert() {
+            document.getElementById("customAlert").style.display = "none";
+        }
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Disable copy/cut/paste/drag/drop
+        ['copy', 'cut', 'paste', 'dragstart', 'drop'].forEach(evt =>
+            document.addEventListener(evt, (e) => e.preventDefault())
+        );
+
+        // Block key shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === "F12" ||                             // DevTools
+                (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || // Ctrl+Shift+I/J/C
+                (e.ctrlKey && ['u', 'U', 's', 'S', 'c', 'C', 'x', 'X'].includes(e.key)) // Ctrl+U/S/C/X
+            ) {
+                e.preventDefault();
+                alert("Action blocked!");
+            }
+        });
+
+        // Detect DevTools opening
+        let checkDevTools = setInterval(function () {
+            if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
+                document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>⚠ Developer Tools Blocked ⚠</h1>";
+                clearInterval(checkDevTools);
+            }
+        }, 1000);
+
+        // Advanced trick: Debugger trap (pauses if devtools is open)
+        setInterval(function () {
+            const before = Date.now();
+            debugger; // Forces lag if DevTools is open
+            if (Date.now() - before > 100) {
+                document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>⚠ Developer Tools Detected ⚠</h1>";
+            }
+        }, 2000);
+    </script>
+</body>
+
+</html>
